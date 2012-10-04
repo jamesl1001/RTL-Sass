@@ -1,0 +1,93 @@
+//  World Service right-to-left switchers
+//  $val is the value of the property
+//  $origin is the original position of the element
+@mixin floatlr($origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      float: right;
+    } @else {
+      float: left;
+    }
+  } @else {
+    @if $rtl {
+      float: left;
+    } @else {
+      float: right;
+    }
+  }
+}
+
+@mixin paddinglr($val, $origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      padding-left: $val;
+    } @else {
+      padding-right: $val;
+    }
+  } @else {
+    @if $rtl {
+      padding-right: $val;
+    } @else {
+      padding-left: $val;
+    }
+  }
+}
+
+@mixin marginlr($val, $origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      margin-left: $val;
+    } @else {
+      margin-right: $val;
+    }
+  } @else {
+    @if $rtl {
+      margin-right: $val;
+    } @else {
+      margin-left: $val;
+    }
+  }
+}
+
+/*@mixin margin-left($val) {
+  @if $rtl {
+     
+  } @else {
+
+  }
+}
+@mixin margin-right($val) {
+  
+}*/
+
+@mixin borderlr($val, $origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      border-left: $val;
+    } @else {
+      border-right: $val;
+    }
+  } @else {
+    @if $rtl {
+      border-right: $val;
+    } @else {
+      border-left: $val;
+    }
+  }
+}
+
+@mixin position-h($val, $origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      right: $val;
+    } @else {
+      left: $val;
+    }
+  } @else {
+    @if $rtl {
+      left: $val;
+    } @else {
+      right: $val;
+    }
+  }
+}

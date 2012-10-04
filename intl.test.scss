@@ -1,0 +1,44 @@
+$rtl: false !default;
+
+@function swap-left-right($list) {
+  @return nth($value, 1) nth($value, 4) nth($value, 3) nth($value, 2);
+}
+
+@mixin intl($property, $value) {
+  // test if value is list with 4 values
+  // then invert nth2 and nth4
+  @if length($value) < 4 or $rtl == false {
+  	#{$property}: $value;
+  } @else {
+  	@if $rtl {
+  		#{$property}: swap-left-right($value);
+      
+  	}
+  }
+}
+
+.test {
+	$rtl: false;
+	/* should return margin: 0 5px 10px 15px */
+  @include intl(margin, 0 5px 10px 15px);
+
+	$rtl: true;
+	/* should return margin: 0 15px 10px 5px */
+  @include intl(margin, 0 5px 10px 15px);
+
+	$rtl: false;
+	/* should return margin: 0 5px 10px */
+  @include intl(margin, 0 5px 10px);
+
+  $rtl: true;
+  /* should return margin: 0 5px 10px */
+  @include intl(margin, 0 5px 10px);
+
+	$rtl: false;
+	/* should return margin: 0 */
+  @include intl(margin, 0);
+
+  $rtl: true;
+  /* should return margin: 0 */
+  @include intl(margin, 0);
+}
