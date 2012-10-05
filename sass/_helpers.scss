@@ -23,6 +23,22 @@
   }
 }
 
+@mixin clear($origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      clear: right;
+    } @else {
+      clear: left;
+    }
+  } @else {
+    @if $rtl {
+      clear: left;
+    } @else {
+      clear: right;
+    }
+  }
+}
+
 @mixin padding-left($val) {
   @if $rtl {
     padding-right: $val;
@@ -160,6 +176,22 @@
     }
   } @else {
     background: $val;
+  }
+}
+
+@mixin text-align($origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      text-align: right;
+    } @else {
+      text-align: left;
+    }
+  } @else {
+    @if $rtl {
+      text-align: left;
+    } @else {
+      text-align: right;
+    }
   }
 }
 

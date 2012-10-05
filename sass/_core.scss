@@ -1,9 +1,16 @@
-/* float */
+/* float/clear */
 #float-origin-left {
   @include float(left);
 }
 #float-origin-right {
   @include float(right);
+}
+
+#clear-origin-left {
+  @include clear(left);
+}
+#clear-origin-right {
+  @include clear(right);
 }
 
 
@@ -99,6 +106,12 @@
 
 
 /* text */
+#text-align-left {
+  @include text-align(left);
+}
+#text-align-right {
+  @include text-align(right);
+}
 #text-indent {
   @include text-indent(8px);
 }

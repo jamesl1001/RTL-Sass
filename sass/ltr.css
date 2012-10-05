@@ -1,9 +1,15 @@
-/* float */
+/* float/clear */
 #float-origin-left {
   float: left; }
 
 #float-origin-right {
   float: right; }
+
+#clear-origin-left {
+  clear: left; }
+
+#clear-origin-right {
+  clear: right; }
 
 /* padding */
 #padding-left {
@@ -84,6 +90,12 @@
   background: url(img.ext) no-repeat 8px center; }
 
 /* text */
+#text-align-left {
+  text-align: left; }
+
+#text-align-right {
+  text-align: right; }
+
 #text-indent {
   text-indent: 8px; }
 
