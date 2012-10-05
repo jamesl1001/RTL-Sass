@@ -11,3 +11,10 @@
 #padding-right {
   @include padding-right(8px);
 }
+
+#margin-left {
+  @include margin-left(8px);
+}
+#margin-right {
+  @include margin-right(8px);
+}

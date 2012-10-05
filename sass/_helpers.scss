@@ -40,31 +40,31 @@
 
 @mixin margin-left($val) {
   @if $rtl {
-    margin-left: $val;
-  } @else {
     margin-right: $val;
+  } @else {
+    margin-left: $val;
   }
 }
 @mixin margin-right($val) {
   @if $rtl {
-    margin-right: $val;
-  } @else {
     margin-left: $val;
+  } @else {
+    margin-right: $val;
   }
 }
 
 @mixin border-left($val) {
   @if $rtl {
-    border-left: $val;
-  } @else {
     border-right: $val;
+  } @else {
+    border-left: $val;
   }
 }
 @mixin border-right($val) {
   @if $rtl {
-    border-right: $val;
-  } @else {
     border-left: $val;
+  } @else {
+    border-right: $val;
   }
 }
 
