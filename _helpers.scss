@@ -1,4 +1,8 @@
-// World Service right-to-left switchers
+// RTL-SASS
+// v0.0.3
+// James Lee
+// http://jalproductions.co.uk
+
 // $val is the value of the property
 // $origin is the original position of the element
 @mixin float($origin: left) {
@@ -114,6 +118,17 @@
   }
 }
 
+// For selectors which have 4 values (e.g. padding, margin, border)
+@mixin intl($property, $value) {
+  @if length($value) < 4 or $rtl == false {
+    #{$property}: $value;
+  } @else {
+    @if $rtl {
+      #{$property}: nth($value, 1) nth($value, 4) nth($value, 3) nth($value, 2);
+    }
+  }
+}
+
 // These include the original position within one mixin
 @mixin paddinglr($val, $origin: left) {
   @if $origin == left {
@@ -178,4 +193,3 @@
     }
   }
 }
-
