@@ -59,6 +59,30 @@
 #background-position-center {
   background-position: center 100px; }
 
+#background-5-left {
+  background: white url(img.ext) no-repeat left center; }
+
+#background-4-left {
+  background: url(img.ext) no-repeat left center; }
+
+#background-5-right {
+  background: white url(img.ext) no-repeat right center; }
+
+#background-4-right {
+  background: url(img.ext) no-repeat right center; }
+
+#background-5-center {
+  background: white url(img.ext) no-repeat center center; }
+
+#background-4-center {
+  background: url(img.ext) no-repeat center center; }
+
+#background-5 {
+  background: white url(img.ext) no-repeat 8px center; }
+
+#background-4 {
+  background: url(img.ext) no-repeat 8px center; }
+
 /* text */
 #text-indent {
   text-indent: 8px; }

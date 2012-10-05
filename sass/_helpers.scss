@@ -131,6 +131,38 @@
   }
 }
 
+// (5) e.g. background: #FFF url(img.ext) no-repeat left center;
+// (4) e.g. background: url(img.ext) no-repeat left center;
+@mixin background($val) {
+  @if $rtl == true {
+    @if length($val) == 5 {
+      @if nth($val, 4) == left {
+        background: nth($val, 1) nth($val, 2) nth($val, 3) right nth($val, 5);
+      } @else if nth($val, 4) == right {
+        background: nth($val, 1) nth($val, 2) nth($val, 3) left nth($val, 5);
+      } @else if nth($val, 4) == center {
+        background: nth($val, 1) nth($val, 2) nth($val, 3) center nth($val, 5);
+      } @else {
+        background: nth($val, 1) nth($val, 2) nth($val, 3) nth($val, 4) * -1 nth($val, 5);
+      }
+    } @else if length($val) == 4 {
+      @if nth($val, 3) == left {
+        background: nth($val, 1) nth($val, 2) right nth($val, 4);
+      } @else if nth($val, 3) == right {
+        background: nth($val, 1) nth($val, 2) left nth($val, 4);
+      } @else if nth($val, 3) == center {
+        background: nth($val, 1) nth($val, 2) center nth($val, 4);
+      } @else {
+        background: nth($val, 1) nth($val, 2) nth($val, 3) * -1 nth($val, 4);
+      }
+    } @else {
+      background: $val;
+    }
+  } @else {
+    background: $val;
+  }
+}
+
 @mixin text-indent($val) {
   @if $rtl {
     text-indent: $val * -1;

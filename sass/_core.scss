@@ -72,6 +72,31 @@
   @include background-position(center 100px);
 }
 
+#background-5-left {
+  @include background(#FFF url(img.ext) no-repeat left center);
+}
+#background-4-left {
+  @include background(url(img.ext) no-repeat left center);
+}
+#background-5-right {
+  @include background(#FFF url(img.ext) no-repeat right center);
+}
+#background-4-right {
+  @include background(url(img.ext) no-repeat right center);
+}
+#background-5-center {
+  @include background(#FFF url(img.ext) no-repeat center center);
+}
+#background-4-center {
+  @include background(url(img.ext) no-repeat center center);
+}
+#background-5 {
+  @include background(#FFF url(img.ext) no-repeat 8px center);
+}
+#background-4 {
+  @include background(url(img.ext) no-repeat 8px center);
+}
+
 
 /* text */
 #text-indent {
