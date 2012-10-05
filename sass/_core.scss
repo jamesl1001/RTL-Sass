@@ -1,0 +1,13 @@
+#float-origin-left {
+  @include float(left);
+}
+#float-origin-right {
+  @include float(right);
+}
+
+#padding-left {
+  @include padding-left(8px);
+}
+#padding-right {
+  @include padding-right(8px);
+}

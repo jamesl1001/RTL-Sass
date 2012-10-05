@@ -1,0 +1,11 @@
+#float-origin-left {
+  float: right; }
+
+#float-origin-right {
+  float: left; }
+
+#padding-left {
+  padding-right: 8px; }
+
+#padding-right {
+  padding-left: 8px; }

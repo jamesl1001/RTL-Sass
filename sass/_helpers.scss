@@ -1,0 +1,207 @@
+// RTL-SASS
+// v0.0.3
+// James Lee
+// http://jalproductions.co.uk
+
+// $val is the value of the property
+// $origin is the original position of the element
+
+
+@mixin float($origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      float: right;
+    } @else {
+      float: left;
+    }
+  } @else {
+    @if $rtl {
+      float: left;
+    } @else {
+      float: right;
+    }
+  }
+}
+
+@mixin padding-left($val) {
+  @if $rtl {
+    padding-right: $val;
+  } @else {
+    padding-left: $val;
+  }
+}
+@mixin padding-right($val) {
+  @if $rtl {
+    padding-left: $val;
+  } @else {
+    padding-right: $val;
+  }
+}
+
+@mixin margin-left($val) {
+  @if $rtl {
+    margin-left: $val;
+  } @else {
+    margin-right: $val;
+  }
+}
+@mixin margin-right($val) {
+  @if $rtl {
+    margin-right: $val;
+  } @else {
+    margin-left: $val;
+  }
+}
+
+@mixin border-left($val) {
+  @if $rtl {
+    border-left: $val;
+  } @else {
+    border-right: $val;
+  }
+}
+@mixin border-right($val) {
+  @if $rtl {
+    border-right: $val;
+  } @else {
+    border-left: $val;
+  }
+}
+
+@mixin border-top-left-radius($val) {
+  @if $rtl {
+    border-top-right-radius: $val;
+  } @else {
+    border-top-left-radius: $val;
+  }
+}
+@mixin border-top-right-radius($val) {
+  @if $rtl {
+    border-top-left-radius: $val;
+  } @else {
+    border-top-right-radius: $val;
+  }
+}
+@mixin border-bottom-left-radius($val) {
+  @if $rtl {
+    border-bottom-right-radius: $val;
+  } @else {
+    border-bottom-left-radius: $val;
+  }
+}
+@mixin border-bottom-right-radius($val) {
+  @if $rtl {
+    border-bottom-left-radius: $val;
+  } @else {
+    border-bottom-right-radius: $val;
+  }
+}
+
+@mixin left($val) {
+  @if $rtl {
+    right: $val;
+  } @else {
+    left: $val;
+  }
+}
+@mixin right($val) {
+  @if $rtl {
+    left: $val;
+  } @else {
+    right: $val;
+  }
+}
+
+@mixin text-indent($val) {
+  @if $rtl {
+    text-indent: $val * -1;
+  } @else {
+    text-indent: $val;
+  }
+}
+
+// For selectors which have 4 values (e.g. padding, margin, border)
+@mixin lrswap($property, $value) {
+  @if length($value) < 4 or $rtl == false {
+    #{$property}: $value;
+  } @else {
+    @if $rtl {
+      #{$property}: nth($value, 1) nth($value, 4) nth($value, 3) nth($value, 2);
+    }
+  }
+}
+
+//Another method to do the same thing as above
+@mixin lrswap2($property, $t, $r, $d, $l) {
+  @if $rtl {
+    #{$property}: $t $l $d $r;
+  } @else {
+    #{$property}: $t $r $d $l;
+  }
+}
+
+
+// These include the original position within one mixin
+@mixin paddinglr($val, $origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      padding-left: $val;
+    } @else {
+      padding-right: $val;
+    }
+  } @else {
+    @if $rtl {
+      padding-right: $val;
+    } @else {
+      padding-left: $val;
+    }
+  }
+}
+
+@mixin marginlr($val, $origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      margin-left: $val;
+    } @else {
+      margin-right: $val;
+    }
+  } @else {
+    @if $rtl {
+      margin-right: $val;
+    } @else {
+      margin-left: $val;
+    }
+  }
+}
+
+@mixin borderlr($val, $origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      border-left: $val;
+    } @else {
+      border-right: $val;
+    }
+  } @else {
+    @if $rtl {
+      border-right: $val;
+    } @else {
+      border-left: $val;
+    }
+  }
+}
+
+@mixin position-h($val, $origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      right: $val;
+    } @else {
+      left: $val;
+    }
+  } @else {
+    @if $rtl {
+      left: $val;
+    } @else {
+      right: $val;
+    }
+  }
+}
