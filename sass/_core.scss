@@ -1,3 +1,4 @@
+/* float */
 #float-origin-left {
   @include float(left);
 }
@@ -5,6 +6,8 @@
   @include float(right);
 }
 
+
+/* padding */
 #padding-left {
   @include padding-left(8px);
 }
@@ -12,9 +15,61 @@
   @include padding-right(8px);
 }
 
+
+/* margin */
 #margin-left {
   @include margin-left(8px);
 }
 #margin-right {
   @include margin-right(8px);
+}
+
+
+/* border */
+#border-left {
+  @include border-left(1px solid #FFF);
+}
+#border-right {
+  @include border-right(1px solid #FFF);
+}
+
+
+/* border-radius */
+#border-top-left-radius {
+  @include border-top-left-radius(2px);
+}
+#border-top-right-radius {
+  @include border-top-right-radius(2px);
+}
+#border-bottom-left-radius {
+  @include border-bottom-left-radius(2px);
+}
+#border-bottom-right-radius {
+  @include border-bottom-right-radius(2px);
+}
+
+
+/* position */
+#left {
+  @include left(8px);
+}
+#right {
+  @include right(8px);
+}
+
+
+/* text */
+#text-indent {
+  @include text-indent(8px);
+}
+
+
+/* 4 value swaps */
+#lrswap {
+  @include lrswap(padding, 0px 8px 16px 24px);
+  @include lrswap(margin, 0px 8px 16px 24px);
+}
+#lrswap2 {
+  @include lrswap2(padding, 0px, 8px, 16px, 24px);
+  @include lrswap2(margin, 0px, 8px, 16px, 24px);
 }

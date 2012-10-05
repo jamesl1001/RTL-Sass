@@ -1,17 +1,60 @@
+/* float */
 #float-origin-left {
   float: right; }
 
 #float-origin-right {
   float: left; }
 
+/* padding */
 #padding-left {
   padding-right: 8px; }
 
 #padding-right {
   padding-left: 8px; }
 
+/* margin */
 #margin-left {
   margin-right: 8px; }
 
 #margin-right {
   margin-left: 8px; }
+
+/* border */
+#border-left {
+  border-right: 1px solid white; }
+
+#border-right {
+  border-left: 1px solid white; }
+
+/* border-radius */
+#border-top-left-radius {
+  border-top-right-radius: 2px; }
+
+#border-top-right-radius {
+  border-top-left-radius: 2px; }
+
+#border-bottom-left-radius {
+  border-bottom-right-radius: 2px; }
+
+#border-bottom-right-radius {
+  border-bottom-left-radius: 2px; }
+
+/* position */
+#left {
+  right: 8px; }
+
+#right {
+  left: 8px; }
+
+/* text */
+#text-indent {
+  text-indent: -8px; }
+
+/* 4 value swaps */
+#lrswap {
+  padding: 0px 24px 16px 8px;
+  margin: 0px 24px 16px 8px; }
+
+#lrswap2 {
+  padding: 0px 24px 16px 8px;
+  margin: 0px 24px 16px 8px; }
