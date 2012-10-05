@@ -46,6 +46,19 @@
 #right {
   left: 8px; }
 
+/* background */
+#background-position {
+  background-position: -8px 100px; }
+
+#background-position-left {
+  background-position: right 100px; }
+
+#background-position-right {
+  background-position: left 100px; }
+
+#background-position-center {
+  background-position: center 100px; }
+
 /* text */
 #text-indent {
   text-indent: -8px; }

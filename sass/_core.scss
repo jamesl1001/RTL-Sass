@@ -58,6 +58,21 @@
 }
 
 
+/* background */
+#background-position {
+  @include background-position(8px 100px);
+}
+#background-position-left {
+  @include background-position(left 100px);
+}
+#background-position-right {
+  @include background-position(right 100px);
+}
+#background-position-center {
+  @include background-position(center 100px);
+}
+
+
 /* text */
 #text-indent {
   @include text-indent(8px);

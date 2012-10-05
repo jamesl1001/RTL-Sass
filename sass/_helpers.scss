@@ -112,6 +112,25 @@
   }
 }
 
+// Note: Don't use this for sprite images!
+// Actually not quite sure what this *would* be used for...
+// But hey-ho, it's here anyway!
+@mixin background-position($val) {
+  @if $rtl {
+    @if nth($val, 1) == left {
+      background-position: right nth($val, 2);
+    } @else if nth($val, 1) == right {
+      background-position: left nth($val, 2);
+    } @else if nth($val, 1) == center {
+      background-position: center nth($val, 2);
+    } @else {
+      background-position: nth($val, 1) * -1 nth($val, 2);
+    }
+  } @else {
+    background-position: nth($val, 1) nth($val, 2);
+  }
+}
+
 @mixin text-indent($val) {
   @if $rtl {
     text-indent: $val * -1;
