@@ -1,10 +1,12 @@
 RTL-SASS
 ========
 v0.0.3
-James Lee
+
 http://jalproductions.co.uk/
 
-Mixins and functions to automatically flip your CSS styles for RTL (right-to-left) pages.
+## What is it?
+
+RTL-SASS provides mixins and functions to automatically flip your CSS styles for RTL (right-to-left) pages.
 
 Supports flipping the following properties:
 * float
