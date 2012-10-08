@@ -33,6 +33,7 @@ Coming soon...
 v0.0.4
 * Added support for direction
 * Reorder mixins alphabetically
+* Added demo page
 
 v0.0.3
 * Sample css files
