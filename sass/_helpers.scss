@@ -1,151 +1,9 @@
 // RTL-SASS
-// v0.0.3
-// James Lee
 // http://jalproductions.co.uk
 
 // $val is the value of the property
 // $origin is the original position of the element
 
-
-@mixin float($origin: left) {
-  @if $origin == left {
-    @if $rtl {
-      float: right;
-    } @else {
-      float: left;
-    }
-  } @else {
-    @if $rtl {
-      float: left;
-    } @else {
-      float: right;
-    }
-  }
-}
-
-@mixin clear($origin: left) {
-  @if $origin == left {
-    @if $rtl {
-      clear: right;
-    } @else {
-      clear: left;
-    }
-  } @else {
-    @if $rtl {
-      clear: left;
-    } @else {
-      clear: right;
-    }
-  }
-}
-
-@mixin padding-left($val) {
-  @if $rtl {
-    padding-right: $val;
-  } @else {
-    padding-left: $val;
-  }
-}
-@mixin padding-right($val) {
-  @if $rtl {
-    padding-left: $val;
-  } @else {
-    padding-right: $val;
-  }
-}
-
-@mixin margin-left($val) {
-  @if $rtl {
-    margin-right: $val;
-  } @else {
-    margin-left: $val;
-  }
-}
-@mixin margin-right($val) {
-  @if $rtl {
-    margin-left: $val;
-  } @else {
-    margin-right: $val;
-  }
-}
-
-@mixin border-left($val) {
-  @if $rtl {
-    border-right: $val;
-  } @else {
-    border-left: $val;
-  }
-}
-@mixin border-right($val) {
-  @if $rtl {
-    border-left: $val;
-  } @else {
-    border-right: $val;
-  }
-}
-
-@mixin border-top-left-radius($val) {
-  @if $rtl {
-    border-top-right-radius: $val;
-  } @else {
-    border-top-left-radius: $val;
-  }
-}
-@mixin border-top-right-radius($val) {
-  @if $rtl {
-    border-top-left-radius: $val;
-  } @else {
-    border-top-right-radius: $val;
-  }
-}
-@mixin border-bottom-left-radius($val) {
-  @if $rtl {
-    border-bottom-right-radius: $val;
-  } @else {
-    border-bottom-left-radius: $val;
-  }
-}
-@mixin border-bottom-right-radius($val) {
-  @if $rtl {
-    border-bottom-left-radius: $val;
-  } @else {
-    border-bottom-right-radius: $val;
-  }
-}
-
-@mixin left($val) {
-  @if $rtl {
-    right: $val;
-  } @else {
-    left: $val;
-  }
-}
-@mixin right($val) {
-  @if $rtl {
-    left: $val;
-  } @else {
-    right: $val;
-  }
-}
-
-// Note: Don't use this for sprite images!
-// Actually not quite sure what this *would* be used for...
-// But hey-ho, it's here anyway!
-@mixin background-position($val) {
-  @if $rtl {
-    @if nth($val, 1) == left {
-      background-position: right nth($val, 2);
-    } @else if nth($val, 1) == right {
-      background-position: left nth($val, 2);
-    } @else if nth($val, 1) == center {
-      background-position: center nth($val, 2);
-    } @else {
-      background-position: nth($val, 1) * -1 nth($val, 2);
-    }
-  } @else {
-    background-position: nth($val, 1) nth($val, 2);
-  }
-}
 
 // (5) e.g. background: #FFF url(img.ext) no-repeat left center;
 // (4) e.g. background: url(img.ext) no-repeat left center;
@@ -179,11 +37,151 @@
   }
 }
 
+// Note: Don't use this for sprite images!
+// Actually not quite sure what this *would* be used for...
+// But hey-ho, it's here anyway!
+@mixin background-position($val) {
+  @if $rtl {
+    @if nth($val, 1) == left {
+      background-position: right nth($val, 2);
+    } @else if nth($val, 1) == right {
+      background-position: left nth($val, 2);
+    } @else if nth($val, 1) == center {
+      background-position: center nth($val, 2);
+    } @else {
+      background-position: nth($val, 1) * -1 nth($val, 2);
+    }
+  } @else {
+    background-position: nth($val, 1) nth($val, 2);
+  }
+}
+
+@mixin border-left($val) {
+  @if $rtl {
+    border-right: $val;
+  } @else {
+    border-left: $val;
+  }
+}
+@mixin border-right($val) {
+  @if $rtl {
+    border-left: $val;
+  } @else {
+    border-right: $val;
+  }
+}
+
+@mixin border-bottom-left-radius($val) {
+  @if $rtl {
+    border-bottom-right-radius: $val;
+  } @else {
+    border-bottom-left-radius: $val;
+  }
+}
+@mixin border-bottom-right-radius($val) {
+  @if $rtl {
+    border-bottom-left-radius: $val;
+  } @else {
+    border-bottom-right-radius: $val;
+  }
+}
+@mixin border-top-left-radius($val) {
+  @if $rtl {
+    border-top-right-radius: $val;
+  } @else {
+    border-top-left-radius: $val;
+  }
+}
+@mixin border-top-right-radius($val) {
+  @if $rtl {
+    border-top-left-radius: $val;
+  } @else {
+    border-top-right-radius: $val;
+  }
+}
+
+@mixin clear($origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      clear: right;
+    } @else {
+      clear: left;
+    }
+  } @else {
+    @if $rtl {
+      clear: left;
+    } @else {
+      clear: right;
+    }
+  }
+}
+
 @mixin direction {
   @if $rtl {
     direction: rtl;
   } @else {
     direction: ltr;
+  }
+}
+
+@mixin float($origin: left) {
+  @if $origin == left {
+    @if $rtl {
+      float: right;
+    } @else {
+      float: left;
+    }
+  } @else {
+    @if $rtl {
+      float: left;
+    } @else {
+      float: right;
+    }
+  }
+}
+
+@mixin left($val) {
+  @if $rtl {
+    right: $val;
+  } @else {
+    left: $val;
+  }
+}
+@mixin right($val) {
+  @if $rtl {
+    left: $val;
+  } @else {
+    right: $val;
+  }
+}
+
+@mixin margin-left($val) {
+  @if $rtl {
+    margin-right: $val;
+  } @else {
+    margin-left: $val;
+  }
+}
+@mixin margin-right($val) {
+  @if $rtl {
+    margin-left: $val;
+  } @else {
+    margin-right: $val;
+  }
+}
+
+@mixin padding-left($val) {
+  @if $rtl {
+    padding-right: $val;
+  } @else {
+    padding-left: $val;
+  }
+}
+@mixin padding-right($val) {
+  @if $rtl {
+    padding-left: $val;
+  } @else {
+    padding-right: $val;
   }
 }
 
@@ -233,18 +231,18 @@
 
 
 // These include the original position within one mixin
-@mixin paddinglr($val, $origin: left) {
+@mixin borderlr($val, $origin: left) {
   @if $origin == left {
     @if $rtl {
-      padding-left: $val;
+      border-left: $val;
     } @else {
-      padding-right: $val;
+      border-right: $val;
     }
   } @else {
     @if $rtl {
-      padding-right: $val;
+      border-right: $val;
     } @else {
-      padding-left: $val;
+      border-left: $val;
     }
   }
 }
@@ -265,18 +263,18 @@
   }
 }
 
-@mixin borderlr($val, $origin: left) {
+@mixin paddinglr($val, $origin: left) {
   @if $origin == left {
     @if $rtl {
-      border-left: $val;
+      padding-left: $val;
     } @else {
-      border-right: $val;
+      padding-right: $val;
     }
   } @else {
     @if $rtl {
-      border-right: $val;
+      padding-right: $val;
     } @else {
-      border-left: $val;
+      padding-left: $val;
     }
   }
 }
