@@ -179,6 +179,14 @@
   }
 }
 
+@mixin direction {
+  @if $rtl {
+    direction: rtl;
+  } @else {
+    direction: ltr;
+  }
+}
+
 @mixin text-align($origin: left) {
   @if $origin == left {
     @if $rtl {
