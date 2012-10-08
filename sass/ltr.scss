@@ -1,3 +1,4 @@
 $rtl:   false;
-@import "_helpers";
-@import "core.scss";
+@import "helpers",
+        "core",
+        "test";
