@@ -77,9 +77,11 @@ h1 {
 
 /* clear */
 #clear-origin-left {
+  float: right;
   clear: right; }
 
 #clear-origin-right {
+  float: left;
   clear: left; }
 
 /* direction */

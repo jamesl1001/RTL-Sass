@@ -87,9 +87,11 @@ h1 {
 
 /* clear */
 #clear-origin-left {
+  @include float(left);
   @include clear(left);
 }
 #clear-origin-right {
+  @include float(right);
   @include clear(right);
 }
 
