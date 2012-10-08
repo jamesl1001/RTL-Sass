@@ -1,68 +1,24 @@
-/* float/clear */
-#float-origin-left {
-  @include float(left);
+html, body {
+  margin: 0;
+  padding: 0;
 }
-#float-origin-right {
-  @include float(right);
+h1 {
+  margin: 0;
 }
-
-#clear-origin-left {
-  @include clear(left);
+#container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 8px;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC;
 }
-#clear-origin-right {
-  @include clear(right);
-}
-
-
-/* padding */
-#padding-left {
-  @include padding-left(8px);
-}
-#padding-right {
-  @include padding-right(8px);
+.box {
+  width: 200px;
+  height: 100px;
+  background: #CCC;
+  position: relative;
 }
 
-
-/* margin */
-#margin-left {
-  @include margin-left(8px);
-}
-#margin-right {
-  @include margin-right(8px);
-}
-
-
-/* border */
-#border-left {
-  @include border-left(1px solid #FFF);
-}
-#border-right {
-  @include border-right(1px solid #FFF);
-}
-
-
-/* border-radius */
-#border-top-left-radius {
-  @include border-top-left-radius(2px);
-}
-#border-top-right-radius {
-  @include border-top-right-radius(2px);
-}
-#border-bottom-left-radius {
-  @include border-bottom-left-radius(2px);
-}
-#border-bottom-right-radius {
-  @include border-bottom-right-radius(2px);
-}
-
-
-/* position */
-#left {
-  @include left(8px);
-}
-#right {
-  @include right(8px);
-}
 
 
 /* background */
@@ -102,6 +58,81 @@
 }
 #background-4 {
   @include background(url(img.ext) no-repeat 8px center);
+}
+
+
+/* border */
+#border-left {
+  @include border-left(1px solid #FFF);
+}
+#border-right {
+  @include border-right(1px solid #FFF);
+}
+
+
+/* border-radius */
+#border-top-left-radius {
+  @include border-top-left-radius(2px);
+}
+#border-top-right-radius {
+  @include border-top-right-radius(2px);
+}
+#border-bottom-left-radius {
+  @include border-bottom-left-radius(2px);
+}
+#border-bottom-right-radius {
+  @include border-bottom-right-radius(2px);
+}
+
+
+/* clear */
+#clear-origin-left {
+  @include clear(left);
+}
+#clear-origin-right {
+  @include clear(right);
+}
+
+
+/* direction */
+#direction {
+  @include direction;
+}
+
+
+/* float */
+#float-origin-left {
+  @include float(left);
+}
+#float-origin-right {
+  @include float(right);
+}
+
+
+/* position */
+#left {
+  @include left(8px);
+}
+#right {
+  @include right(8px);
+}
+
+
+/* margin */
+#margin-left {
+  @include margin-left(8px);
+}
+#margin-right {
+  @include margin-right(8px);
+}
+
+
+/* padding */
+#padding-left {
+  @include padding-left(8px);
+}
+#padding-right {
+  @include padding-right(8px);
 }
 
 

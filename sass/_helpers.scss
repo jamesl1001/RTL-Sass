@@ -218,7 +218,7 @@
       #{$property}: nth($value, 1) nth($value, 4) nth($value, 3) nth($value, 2);
     }
   }
-} 
+}
 
 //Another method to do the same thing as above
 @mixin lrswap2($property, $t, $r, $d, $l) {

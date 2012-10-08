@@ -1,0 +1,134 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  margin: 0; }
+
+#container {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 8px;
+  border-left: 1px solid #CCC;
+  border-right: 1px solid #CCC; }
+
+.box {
+  width: 200px;
+  height: 100px;
+  background: #CCC;
+  position: relative; }
+
+/* background */
+#background-position {
+  background-position: -8px 100px; }
+
+#background-position-left {
+  background-position: right 100px; }
+
+#background-position-right {
+  background-position: left 100px; }
+
+#background-position-center {
+  background-position: center 100px; }
+
+#background-5-left {
+  background: white url(img.ext) no-repeat right center; }
+
+#background-4-left {
+  background: url(img.ext) no-repeat right center; }
+
+#background-5-right {
+  background: white url(img.ext) no-repeat left center; }
+
+#background-4-right {
+  background: url(img.ext) no-repeat left center; }
+
+#background-5-center {
+  background: white url(img.ext) no-repeat center center; }
+
+#background-4-center {
+  background: url(img.ext) no-repeat center center; }
+
+#background-5 {
+  background: white url(img.ext) no-repeat -8px center; }
+
+#background-4 {
+  background: url(img.ext) no-repeat -8px center; }
+
+/* border */
+#border-left {
+  border-right: 1px solid white; }
+
+#border-right {
+  border-left: 1px solid white; }
+
+/* border-radius */
+#border-top-left-radius {
+  border-top-right-radius: 2px; }
+
+#border-top-right-radius {
+  border-top-left-radius: 2px; }
+
+#border-bottom-left-radius {
+  border-bottom-right-radius: 2px; }
+
+#border-bottom-right-radius {
+  border-bottom-left-radius: 2px; }
+
+/* clear */
+#clear-origin-left {
+  clear: right; }
+
+#clear-origin-right {
+  clear: left; }
+
+/* direction */
+#direction {
+  direction: rtl; }
+
+/* float */
+#float-origin-left {
+  float: right; }
+
+#float-origin-right {
+  float: left; }
+
+/* position */
+#left {
+  right: 8px; }
+
+#right {
+  left: 8px; }
+
+/* margin */
+#margin-left {
+  margin-right: 8px; }
+
+#margin-right {
+  margin-left: 8px; }
+
+/* padding */
+#padding-left {
+  padding-right: 8px; }
+
+#padding-right {
+  padding-left: 8px; }
+
+/* text */
+#text-align-left {
+  text-align: right; }
+
+#text-align-right {
+  text-align: left; }
+
+#text-indent {
+  text-indent: -8px; }
+
+/* 4 value swaps */
+#lrswap {
+  padding: 0px 24px 16px 8px;
+  margin: 0px 24px 16px 8px; }
+
+#lrswap2 {
+  padding: 0px 24px 16px 8px;
+  margin: 0px 24px 16px 8px; }
