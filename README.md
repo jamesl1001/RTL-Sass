@@ -1,6 +1,7 @@
 RTL-Sass
 ========
-v0.0.4
+
+v0.0.5
 
 http://jalproductions.co.uk/
 
