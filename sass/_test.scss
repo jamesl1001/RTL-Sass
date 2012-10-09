@@ -1,0 +1,146 @@
+/* ==========
+ * = Testing
+ * ========== */
+
+/* background */
+#background-position {
+  @include background-position(8px 100px);
+}
+#background-position-left {
+  @include background-position(left 100px);
+}
+#background-position-right {
+  @include background-position(right 100px);
+}
+#background-position-center {
+  @include background-position(center 100px);
+}
+
+#background-5-left {
+  @include background(#FFF url(img.ext) no-repeat left center);
+}
+#background-4-left {
+  @include background(url(img.ext) no-repeat left center);
+}
+#background-5-right {
+  @include background(#FFF url(img.ext) no-repeat right center);
+}
+#background-4-right {
+  @include background(url(img.ext) no-repeat right center);
+}
+#background-5-center {
+  @include background(#FFF url(img.ext) no-repeat center center);
+}
+#background-4-center {
+  @include background(url(img.ext) no-repeat center center);
+}
+#background-5 {
+  @include background(#FFF url(img.ext) no-repeat 8px center);
+}
+#background-4 {
+  @include background(url(img.ext) no-repeat 8px center);
+}
+
+
+/* border */
+#border-left {
+  @include border-left(1px solid #FFF);
+}
+#border-right {
+  @include border-right(1px solid #FFF);
+}
+
+
+/* border-radius */
+#border-top-left-radius {
+  @include border-top-left-radius(2px);
+}
+#border-top-right-radius {
+  @include border-top-right-radius(2px);
+}
+#border-bottom-left-radius {
+  @include border-bottom-left-radius(2px);
+}
+#border-bottom-right-radius {
+  @include border-bottom-right-radius(2px);
+}
+
+
+/* clear */
+#clear-origin-left {
+  @include float(left);
+  @include clear(left);
+}
+#clear-origin-right {
+  @include float(right);
+  @include clear(right);
+}
+
+
+/* direction */
+#direction {
+  @include direction;
+}
+
+
+/* float */
+#float-origin-left {
+  @include float(left);
+}
+#float-origin-right {
+  @include float(right);
+}
+
+
+/* position */
+#left {
+  @include left(8px);
+}
+#right {
+  @include right(8px);
+}
+
+
+/* margin */
+#margin-left {
+  @include margin-left(8px);
+}
+#margin-right {
+  @include margin-right(8px);
+}
+
+
+/* padding */
+#padding-0-8px-16px-24px {
+  @include padding(0 8px 16px 24px);
+}
+#padding-left {
+  @include padding-left(8px);
+}
+#padding-right {
+  @include padding-right(8px);
+}
+
+
+/* text */
+#text-align-left {
+  @include text-align(left);
+}
+#text-align-right {
+  @include text-align(right);
+}
+#text-indent {
+  @include text-indent(8px);
+}
+
+
+/* 4 value swaps */
+#lrswap-0-8px-16px-24px {
+  /* Should return the same 2 values: */
+  @include lrswap(padding, 0 8px 16px 24px);
+  @include padding(0 8px 16px 24px);
+
+  /* Should return the same 2 values: */
+  @include lrswap(margin, 0 8px 16px 24px);
+  @include margin(0 8px 16px 24px);
+}
