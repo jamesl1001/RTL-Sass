@@ -1,3 +1,5 @@
 $rtl:   true;
-@import "_helpers";
-@import "core.scss";
+/*! Values should be inverted (left/right…) */
+@import "rtl-sass",
+        "core",
+        "test";
