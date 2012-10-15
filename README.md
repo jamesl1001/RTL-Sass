@@ -35,10 +35,10 @@ Coming soon...
 ### 0.0.5
 
 - indent properties and align values
-- add mixing `margin()`, `padding()` and `border-width()`
-- remove `lrswap2()`: no really critical use case & confusing
+- add mixins `margin()`, `padding()` and `border-width()`
+- remove `lrswap2()`: no critical use case and confusing
 - `$rtl` has a default value
-- prefer `$val` to `$value` and `$values`, more explicit
+- prefer `$value` and `$values` instead of `$val`, more explicit
 - tests are in a separate file
 
 ### 0.0.4
