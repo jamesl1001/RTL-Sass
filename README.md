@@ -7,7 +7,7 @@ http://jalproductions.co.uk/
 
 ## What is it?
 
-RTL-Sass provides mixins and functions to automatically flip your CSS styles for RTL (right-to-left) documents.
+RTL-Sass provides mixins and functions to automatically flip your CSS styles for RTL (right-to-left) pages.
 
 Supports flipping the following properties:
 
@@ -43,22 +43,22 @@ Coming soon...
 
 ### 0.0.4
 
-- Added support for direction
+- Added support for `direction`
 - Reorder mixins alphabetically
 - Added demo page
 
 ### 0.0.3
 
 - Sample css files
-- Added support for background, background-position, clear and text-align
+- Added support for `background`, `background-position`, `clear` and `text-align`
 
 ### 0.0.2
 
 - Refining mixins to look more like normal CSS
-- Added support for border-radius and text indent
+- Added support for `border-radius` and `text-indent`
 - Added a universal swap mixin that can take any property that has 4 values
 
 ### 0.0.1
 
 - Initial release
-- Support for float, padding, margin, border and position
+- Support for `float`, `padding`, `margin`, `border` and `position`
