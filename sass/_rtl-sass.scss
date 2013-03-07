@@ -20,6 +20,8 @@ $rtl: false !default;
         background: nth($value, 1) nth($value, 2) nth($value, 3) left nth($value, 5);
       } @else if nth($value, 4) == center {
         background: nth($value, 1) nth($value, 2) nth($value, 3) center nth($value, 5);
+      } @else if nth($value, 4) == 50% {
+        background: nth($value, 1) nth($value, 2) nth($value, 3) 50% nth($value, 5);
       } @else {
         background: nth($value, 1) nth($value, 2) nth($value, 3) nth($value, 4) * -1 nth($value, 5);
       }
@@ -30,6 +32,8 @@ $rtl: false !default;
         background: nth($value, 1) nth($value, 2) left nth($value, 4);
       } @else if nth($value, 3) == center {
         background: nth($value, 1) nth($value, 2) center nth($value, 4);
+      } @else if nth($value, 3) == 50% {
+        background: nth($value, 1) nth($value, 2) 50% nth($value, 4);
       } @else {
         background: nth($value, 1) nth($value, 2) nth($value, 3) * -1 nth($value, 4);
       }
@@ -52,6 +56,8 @@ $rtl: false !default;
       background-position: left nth($value, 2);
     } @else if nth($value, 1) == center {
       background-position: center nth($value, 2);
+    } @else if nth($value, 1) == 50% {
+      background-position: 50% nth($value, 2);
     } @else {
       background-position: nth($value, 1) * -1 nth($value, 2);
     }
@@ -211,9 +217,9 @@ $rtl: false !default;
   @include paddinglr($value, right);
 }
 
-// ===========================
-// = Left/right positionning =
-// ===========================
+// ==========================
+// = Left/right positioning =
+// ==========================
 @mixin position-h($value, $origin: left) {
   @if $origin == left {
     @if $rtl { right: $value; }

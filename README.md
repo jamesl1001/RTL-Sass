@@ -1,7 +1,7 @@
 RTL-Sass
 ========
 
-v0.0.5
+v0.0.6
 
 http://jalproductions.co.uk/
 
@@ -31,6 +31,10 @@ These mixins are for use with Sass (http://sass-lang.com/).
 Coming soon...
 
 ## Change log
+
+### 0.0.6
+
+- Add support for backgrounds which are centred using `50%` instead of `center`
 
 ### 0.0.5
 
