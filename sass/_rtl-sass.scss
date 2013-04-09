@@ -6,14 +6,28 @@ $rtl: false !default;
 // $value is the value of the property
 // $origin is the original position of the element
 
+// Background is only supported if written in the following combinations:
+// (6) e.g. background: #FFF url(img.jpg) no-repeat fixed left center;
+// (5) e.g. background: #FFF url(img.jpg) no-repeat left center;
+// (4) e.g. background: url(img.jpg) no-repeat left center;
 
-// (5) e.g. background: #FFF url(img.ext) no-repeat left center;
-// (4) e.g. background: url(img.ext) no-repeat left center;
-// TODO Refactor or abandon this notation, because the background property
-// has lots of different possible syntaxes (gradients, images, order of arguments…)
 @mixin background($value) {
   @if $rtl == true {
-    @if length($value) == 5 {
+    @if length($value) == 6 {
+      @if nth($value, 5) == left {
+        background: nth($value, 1) nth($value, 2) nth($value, 3) nth($value, 4) right nth($value, 6);
+      } @else if nth($value, 5) == right {
+        background: nth($value, 1) nth($value, 2) nth($value, 3) nth($value, 4) left nth($value, 6);
+      } @else if nth($value, 5) == center {
+        background: nth($value, 1) nth($value, 2) nth($value, 3) nth($value, 4) center nth($value, 6);
+      } @else if nth($value, 5) == 50% {
+        background: nth($value, 1) nth($value, 2) nth($value, 3) nth($value, 4) 50% nth($value, 6);
+      } @else if unit(nth($value, 5)) == "%" {
+        background: nth($value, 1) nth($value, 2) nth($value, 3) nth($value, 4) 100 - nth($value, 4) nth($value, 6);
+      } @else {
+        background: nth($value, 1) nth($value, 2) nth($value, 3) nth($value, 4) nth($value, 4) * -1 nth($value, 6);
+      }
+    } @else if length($value) == 5 {
       @if nth($value, 4) == left {
         background: nth($value, 1) nth($value, 2) nth($value, 3) right nth($value, 5);
       } @else if nth($value, 4) == right {
@@ -22,6 +36,8 @@ $rtl: false !default;
         background: nth($value, 1) nth($value, 2) nth($value, 3) center nth($value, 5);
       } @else if nth($value, 4) == 50% {
         background: nth($value, 1) nth($value, 2) nth($value, 3) 50% nth($value, 5);
+      } @else if unit(nth($value, 4)) == "%" {
+        background: nth($value, 1) nth($value, 2) nth($value, 3) 100 - nth($value, 4) nth($value, 5);
       } @else {
         background: nth($value, 1) nth($value, 2) nth($value, 3) nth($value, 4) * -1 nth($value, 5);
       }
@@ -34,6 +50,8 @@ $rtl: false !default;
         background: nth($value, 1) nth($value, 2) center nth($value, 4);
       } @else if nth($value, 3) == 50% {
         background: nth($value, 1) nth($value, 2) 50% nth($value, 4);
+      } @else if unit(nth($value, 3)) == "%" {
+        background: nth($value, 1) nth($value, 2) 100 - nth($value, 3) nth($value, 4);
       } @else {
         background: nth($value, 1) nth($value, 2) nth($value, 3) * -1 nth($value, 4);
       }
@@ -58,6 +76,8 @@ $rtl: false !default;
       background-position: center nth($value, 2);
     } @else if nth($value, 1) == 50% {
       background-position: 50% nth($value, 2);
+    } @else if unit(nth($value, 1)) == "%" {
+      background-position: 100 - nth($value, 1), nth($value, 2);
     } @else {
       background-position: nth($value, 1) * -1 nth($value, 2);
     }
