@@ -1,7 +1,7 @@
 RTL-Sass
 ========
 
-v0.0.6
+v0.0.7
 
 http://jalproductions.co.uk/
 
@@ -16,6 +16,7 @@ Supports flipping the following properties:
 - border
 - border-radius
 - clear
+- cursor
 - direction
 - float
 - left/right
@@ -31,6 +32,12 @@ These mixins are for use with Sass (http://sass-lang.com/).
 Coming soon...
 
 ## Change log
+
+### 0.0.7
+
+- Add support for backgrounds which have horizontal positioning set in percent (%)
+- Add support for background shorthands with 6 values
+- Add support for `cursor`: `ne-resize`, `e-resize`, `se-resize`, `sw-resize`, `w-resize`, `nw-resize`
 
 ### 0.0.6
 

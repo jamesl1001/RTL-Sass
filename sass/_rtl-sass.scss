@@ -113,6 +113,26 @@ $rtl: false !default;
   }
 }
 
+@mixin cursor($value) {
+  @if $rtl {
+    @if $value == ne-resize {
+      cursor: nw-resize;
+    } @else if $value == e-resize {
+      cursor: w-resize;
+    } @else if $value == se-resize {
+      cursor: sw-resize;
+    } @else if $value == sw-resize {
+      cursor: se-resize;
+    } @else if $value == w-resize {
+      cursor: e-resize;
+    } @else if $value == nw-resize {
+      cursor: ne-resize;
+    }
+  } @else {
+    cursor: $value;
+  }
+}
+
 @mixin direction {
   @if $rtl {
     direction: rtl;
