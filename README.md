@@ -3,8 +3,6 @@ RTL-Sass
 
 v0.0.7
 
-http://jalproductions.co.uk/
-
 ## What is it?
 
 RTL-Sass provides mixins and functions to automatically flip your CSS styles for RTL (right-to-left) pages.
